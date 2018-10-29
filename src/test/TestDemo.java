@@ -27,9 +27,8 @@ class Singleton2{
 	
 	public static Singleton2 getInstance(){
 		
-		if(instance == null){
+		if(instance == null)
 			instance = new Singleton2();
-		}
 		
 		return instance;
 	}
@@ -42,17 +41,16 @@ class Singleton3{
 	
 	private Singleton3(){}
 	
-	public static synchronized Singleton3 getInstanxce(){
+	public static synchronized Singleton3 getInstance(){
 		
-		if(instance == null){
+		if(instance == null)
 			instance = new Singleton3();
-		}
 		
 		return instance;
 	}
 }
 
-//双检锁模式
+//普通双检锁模式
 class Singleton4{
 	
 	private static Singleton4 instance;
@@ -75,24 +73,24 @@ class Singleton4{
 //基于volatile的双检锁模式
 class Singleton5{
 	
-	private static volatile Singleton5 instance;
+	private static volatile Singleton5 instace;
 	
 	private Singleton5(){}
 	
 	public static Singleton5 getInstance(){
 		
-		if(instance == null){
+		if(instace == null){
 			synchronized (Singleton5.class) {
-				if(instance == null)
-					instance = new Singleton5();
+				if(instace == null)
+					instace = new Singleton5();
 			}
 		}
 		
-		return instance;
+		return instace;
 	}
 }
 
-//静态内部类
+//静态内部类模式
 class Singleton6{
 	
 	private Singleton6(){}
