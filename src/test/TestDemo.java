@@ -72,21 +72,21 @@ class Singleton4{
 
 //基于volatile的双检锁模式
 class Singleton5{
-	
-	private static volatile Singleton5 instace;
+
+	private static volatile Singleton5 instance;
 	
 	private Singleton5(){}
 	
 	public static Singleton5 getInstance(){
 		
-		if(instace == null){
+		if(instance == null){
 			synchronized (Singleton5.class) {
-				if(instace == null)
-					instace = new Singleton5();
+				if(instance == null)
+					instance = new Singleton5();
 			}
 		}
 		
-		return instace;
+		return instance;
 	}
 }
 
@@ -103,4 +103,3 @@ class Singleton6{
 		return Inner.instance;
 	}
 }
-
