@@ -72,7 +72,7 @@ class Singleton4{
 
 //基于volatile的双检锁模式
 class Singleton5{
-
+	
 	private static volatile Singleton5 instance;
 	
 	private Singleton5(){}
