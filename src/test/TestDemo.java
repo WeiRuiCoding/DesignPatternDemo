@@ -90,7 +90,7 @@ class Singleton5{
 	}
 }
 
-//静态内部类模式
+//静态内部类
 class Singleton6{
 	
 	private Singleton6(){}
